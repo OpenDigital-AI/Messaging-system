@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="rzlXse23zjjpreErfdCt" name="Biz capability">
-        <mxGraphModel dx="2160" dy="826" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2607" dy="826" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -33,6 +33,9 @@
                 </mxCell>
                 <mxCell id="28" value="&lt;p style=&quot;margin: 0px 0px 16px; color: rgb(59, 59, 59); font-family: &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, sans-serif; font-size: 13px; background-color: rgb(248, 248, 248);&quot;&gt;&lt;strong&gt;Content Authoring&lt;/strong&gt;&lt;/p&gt;&lt;ul style=&quot;padding-inline-start: 24px; color: rgb(59, 59, 59); font-family: &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, sans-serif; font-size: 13px; background-color: rgb(248, 248, 248);&quot;&gt;&lt;li&gt;Channel-specific authoring (Email/SMS/Push/In-app)&lt;/li&gt;&lt;li&gt;Rich content blocks (header/body/footer, buttons/CTAs)&lt;/li&gt;&lt;li&gt;Variables / placeholders (e.g.,&amp;nbsp;&lt;code style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 11.999px; color: rgb(59, 59, 59); background-color: rgba(0, 0, 0, 0.12); white-space-collapse: preserve;&quot;&gt;{{firstName}}&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;Conditional content (if/else by locale, segment, attributes)&lt;/li&gt;&lt;li&gt;Reusable partials/components (snippets, layouts)&lt;/li&gt;&lt;li&gt;Attachments (email) and media management (push/in-app)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
                     <mxGeometry x="-544" y="203" width="412" height="186" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;p style=&quot;margin: 0px 0px 16px; color: rgb(59, 59, 59); font-family: &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, sans-serif; font-size: 13px; background-color: rgb(248, 248, 248);&quot;&gt;&lt;strong&gt;Testing &amp;amp; Quality&lt;/strong&gt;&lt;/p&gt;&lt;ul style=&quot;padding-inline-start: 24px; color: rgb(59, 59, 59); font-family: &amp;quot;Segoe WPC&amp;quot;, &amp;quot;Segoe UI&amp;quot;, sans-serif; font-size: 13px; background-color: rgb(248, 248, 248);&quot;&gt;&lt;li&gt;Linting (broken variables, invalid links)&lt;/li&gt;&lt;li&gt;Channel constraints checks (SMS length, push title/body limits)&lt;/li&gt;&lt;li&gt;Deliverability checks (email headers, spam-risk heuristics if applicable)&lt;/li&gt;&lt;li&gt;Rendering previews (email client previews if supported)&lt;/li&gt;&lt;li&gt;Test send / sandbox send&lt;/li&gt;&lt;li&gt;Link validation and UTM enforcement rules&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="-1405" y="847" width="457" height="186" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

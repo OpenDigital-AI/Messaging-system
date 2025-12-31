@@ -1,0 +1,85 @@
+<mxfile host="65bd71144e">
+    <diagram id="template-mgmt" name="Template Management">
+        <mxGraphModel dx="2042" dy="826" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;Template Management&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=32;" parent="1" vertex="1">
+                    <mxGeometry x="77" y="8" width="1160" height="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;p&gt;&lt;b&gt;Catalog &amp;amp; Discovery&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Library, search, tags/folders&lt;/li&gt;&lt;li&gt;Ownership &amp;amp; metadata (channel/brand/status)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="20" y="52" width="297" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;p&gt;&lt;b&gt;Authoring (Email/SMS/Push)&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Channel editors&lt;/li&gt;&lt;li&gt;Reusable snippets/partials&lt;/li&gt;&lt;li&gt;Variable insertion helpers&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="400" y="218" width="293" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;p&gt;&lt;b&gt;Personalization Model&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Variable schema (type/required/default)&lt;/li&gt;&lt;li&gt;Conditional content rules&lt;/li&gt;&lt;li&gt;Escaping/rendering rules&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="783" y="216" width="360" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;p&gt;&lt;b&gt;Variants &amp;amp; Localization&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Locale variants&lt;/li&gt;&lt;li&gt;Fallback rules&lt;/li&gt;&lt;li&gt;Regional legal variants&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="20" y="220" width="302" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;p&gt;&lt;b&gt;Lifecycle &amp;amp; Versioning&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Draft → Published → Deprecated&lt;/li&gt;&lt;li&gt;Version history/diff&lt;/li&gt;&lt;li&gt;Rollback, dependency view&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="395" y="52" width="282" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;p&gt;&lt;b&gt;Self-Service Preview &amp;amp; Whitelist Test Send (KEY)&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Preview (Email HTML / SMS segments / Push payload)&lt;/li&gt;&lt;li&gt;Sample data simulation (test profile or JSON)&lt;/li&gt;&lt;li&gt;Validation (variables, constraints, links, policy)&lt;/li&gt;&lt;li&gt;Whitelist gate + test send + results (by version)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;strokeWidth=2;" parent="2" vertex="1">
+                    <mxGeometry x="785" y="392" width="360" height="142" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;p&gt;&lt;b&gt;Governance &amp;amp; Access&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;RBAC (viewer/editor/approver/admin)&lt;/li&gt;&lt;li&gt;Optional maker-checker approvals&lt;/li&gt;&lt;li&gt;Audit trail (changes + approvals + tests)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="20" y="388" width="300" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;p&gt;&lt;b&gt;Compliance &amp;amp; Policy Rules&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Required elements (unsubscribe/opt-out/legal)&lt;/li&gt;&lt;li&gt;Banned/required phrases&lt;/li&gt;&lt;li&gt;Sensitive data rules&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="400" y="388" width="297" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;p&gt;&lt;b&gt;Integration &amp;amp; APIs&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;CRUD APIs + import/export&lt;/li&gt;&lt;li&gt;Events/webhooks (published/deprecated)&lt;/li&gt;&lt;li&gt;Campaign/journey integration hooks&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                    <mxGeometry x="783" y="52" width="360" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;b&gt;Customer/Profile Data&lt;/b&gt;&lt;br/&gt;Test profile + sample attributes" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="434" width="260" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;b&gt;Channel Gateways&lt;/b&gt;&lt;br/&gt;Email / SMS / Push providers" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="912" y="624" width="260" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;b&gt;Identity / IAM&lt;/b&gt;&lt;br/&gt;Users, roles, permissions" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="-112" y="426" width="135" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="&lt;b&gt;Audit / Logging&lt;/b&gt;&lt;br/&gt;Centralized audit evidence" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="117" y="616" width="260" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;b&gt;Campaign/Journey Tool&lt;/b&gt;&lt;br/&gt;Uses published templates" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1356" y="80" width="260" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="11" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="11" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="14" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="12" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="17" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="sample data" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="30" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="test send" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="15" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="RBAC" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="32" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="audit evidence" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="16" target="33" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="published templates" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="18" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
