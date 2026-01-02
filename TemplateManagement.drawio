@@ -1,13 +1,13 @@
 <mxfile host="65bd71144e">
     <diagram id="template-mgmt" name="Template Management">
-        <mxGraphModel dx="2042" dy="826" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+        <mxGraphModel dx="2146" dy="2026" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="&lt;b&gt;Template Management&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=32;" parent="1" vertex="1">
                     <mxGeometry x="77" y="8" width="1160" height="560" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="&lt;p&gt;&lt;b&gt;Catalog &amp;amp; Discovery&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Library, search, tags/folders&lt;/li&gt;&lt;li&gt;Ownership &amp;amp; metadata (channel/brand/status)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
+                <mxCell id="10" value="&lt;p&gt;&lt;b&gt;Template Library (Source of Truth)&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Search, tags/folders, ownership, metadata&lt;/li&gt;&lt;li&gt;Canonical templates by id + version (published registry)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
                     <mxGeometry x="20" y="52" width="297" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="&lt;p&gt;&lt;b&gt;Authoring (Email/SMS/Push)&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Channel editors&lt;/li&gt;&lt;li&gt;Reusable snippets/partials&lt;/li&gt;&lt;li&gt;Variable insertion helpers&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
@@ -34,28 +34,79 @@
                 <mxCell id="18" value="&lt;p&gt;&lt;b&gt;Integration &amp;amp; APIs&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;CRUD APIs + import/export&lt;/li&gt;&lt;li&gt;Events/webhooks (published/deprecated)&lt;/li&gt;&lt;li&gt;Campaign/journey integration hooks&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="2" vertex="1">
                     <mxGeometry x="783" y="52" width="360" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="&lt;b&gt;Customer/Profile Data&lt;/b&gt;&lt;br/&gt;Test profile + sample attributes" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="1320" y="434" width="260" height="80" as="geometry"/>
+                <mxCell id="30" value="&lt;b&gt;Context Assembly (Per-Service Payload)&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" parent="1" vertex="1">
+                    <mxGeometry x="1358" y="-697" width="420" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="&lt;b&gt;Core Banking&lt;/b&gt;&lt;br/&gt;Balances, account status,&lt;br/&gt;transactions, due dates" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="30" vertex="1">
+                    <mxGeometry x="16" y="44" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="&lt;b&gt;Customer System&lt;/b&gt;&lt;br/&gt;Identity, contact points,&lt;br/&gt;language/region" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="30" vertex="1">
+                    <mxGeometry x="216" y="44" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;b&gt;Cards System&lt;/b&gt;&lt;br/&gt;Card events, merchant details,&lt;br/&gt;card status" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="30" vertex="1">
+                    <mxGeometry x="16" y="144" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;b&gt;Digital Channels/App&lt;/b&gt;&lt;br/&gt;Device token, app version,&lt;br/&gt;deep links" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="30" vertex="1">
+                    <mxGeometry x="216" y="144" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="&lt;b&gt;Consent/Preference Service&lt;/b&gt;&lt;br/&gt;Marketing consent (Email/SMS/Push)&lt;br/&gt;Topic subscriptions + suppressions" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="30" vertex="1">
+                    <mxGeometry x="16" y="244" width="388" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="31" value="&lt;b&gt;Channel Gateways&lt;/b&gt;&lt;br/&gt;Email / SMS / Push providers" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="912" y="624" width="260" height="80" as="geometry"/>
+                    <mxGeometry x="977" y="626" width="260" height="195" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="&lt;b&gt;Identity / IAM&lt;/b&gt;&lt;br/&gt;Users, roles, permissions" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="-112" y="426" width="135" height="80" as="geometry"/>
+                <mxCell id="36" value="&lt;b&gt;NotificationHub&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" parent="1" vertex="1">
+                    <mxGeometry x="-212" y="-979" width="560" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="&lt;b&gt;Ingress / API&lt;/b&gt;&lt;br/&gt;Campaign triggers, events" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="36" vertex="1">
+                    <mxGeometry x="16" y="44" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="&lt;b&gt;Routing &amp;amp; Orchestration&lt;/b&gt;&lt;br/&gt;Channel selection, flow" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="36" vertex="1">
+                    <mxGeometry x="292" y="44" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="&lt;b&gt;Template Resolution&lt;/b&gt;&lt;br/&gt;Fetch id + version" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="36" vertex="1">
+                    <mxGeometry x="16" y="132" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="&lt;b&gt;Consent &amp;amp; Policy Gate&lt;/b&gt;&lt;br/&gt;Marketing + suppressions" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="36" vertex="1">
+                    <mxGeometry x="292" y="132" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;b&gt;Render &amp;amp; Personalize&lt;/b&gt;&lt;br/&gt;Merge context + locale" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="36" vertex="1">
+                    <mxGeometry x="16" y="220" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="&lt;b&gt;Dispatch &amp;amp; Retry&lt;/b&gt;&lt;br/&gt;Send, retry, throttling" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="36" vertex="1">
+                    <mxGeometry x="292" y="220" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="&lt;b&gt;Events &amp;amp; Telemetry&lt;/b&gt;&lt;br/&gt;Audit + metrics emit" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="36" vertex="1">
+                    <mxGeometry x="16" y="308" width="528" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="33" value="&lt;b&gt;Audit / Logging&lt;/b&gt;&lt;br/&gt;Centralized audit evidence" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="117" y="616" width="260" height="80" as="geometry"/>
+                    <mxGeometry x="117" y="671.5" width="260" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="&lt;b&gt;Campaign/Journey Tool&lt;/b&gt;&lt;br/&gt;Uses published templates" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="1356" y="80" width="260" height="80" as="geometry"/>
+                <mxCell id="35" value="&lt;b&gt;Reporting/Dashboard&lt;/b&gt;&lt;br/&gt;Operational &amp;amp; business insights" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="487" y="677" width="260" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="&lt;b&gt;Event Producers&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" parent="1" vertex="1">
+                    <mxGeometry x="-784" y="-1121" width="320" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;b&gt;Campaign/Journey Tool&lt;/b&gt;&lt;br/&gt;Uses published templates" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="105" vertex="1">
+                    <mxGeometry x="30" y="364" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="&lt;b&gt;Core Banking Events&lt;/b&gt;&lt;br/&gt;Txn posted, balance change" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="105" vertex="1">
+                    <mxGeometry x="30" y="44" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="&lt;b&gt;Cards Platform&lt;/b&gt;&lt;br/&gt;Auth/decline, card status" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="105" vertex="1">
+                    <mxGeometry x="30" y="124" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="&lt;b&gt;Digital Channel (App/Web)&lt;/b&gt;&lt;br/&gt;User actions, device signals" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="105" vertex="1">
+                    <mxGeometry x="30" y="204" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="&lt;b&gt;Customer/CRM&lt;/b&gt;&lt;br/&gt;Profile updates, lifecycle" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="105" vertex="1">
+                    <mxGeometry x="30" y="284" width="260" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="50" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="11" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="51" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="11" target="13" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="52" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="14" target="10" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="53" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="12" target="15" edge="1">
@@ -64,19 +115,179 @@
                 <mxCell id="54" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="17" target="15" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="sample data" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="30" target="15" edge="1">
+                <mxCell id="55" value="sample payload" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="30" target="15" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="test send" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="15" target="31" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="57" value="RBAC" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="32" target="16" edge="1">
+                <mxCell id="56" value="test send" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="15" target="31" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="58" value="audit evidence" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="16" target="33" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="59" value="published templates" style="endArrow=block;endFill=1;rounded=0;html=1;" parent="1" source="18" target="34" edge="1">
+                <mxCell id="59" value="published templates" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="18" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="resolve template (id+version)" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="36" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="audit events" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="33" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="metrics/telemetry" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="31" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="deliver" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="36" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-338" y="-874"/>
+                            <mxPoint x="-338" y="852"/>
+                            <mxPoint x="1282" y="852"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="65" value="context lookup" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="36" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="delivery/audit events" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="36" target="33" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-234" y="-769"/>
+                            <mxPoint x="-234" y="712"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="115" value="events/triggers" style="endArrow=block;endFill=1;rounded=0;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="105" target="90" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="5ogidr9klE70Is0I_Jif" name="Page-2">
+        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-9" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="oRmCvfrn0HqmgXv1rQWE-1" target="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="oRmCvfrn0HqmgXv1rQWE-1" value="&lt;b&gt;Event Producers&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" vertex="1" parent="1">
+                    <mxGeometry x="-150" y="70" width="320" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="oRmCvfrn0HqmgXv1rQWE-2" value="&lt;b&gt;Campaign/Journey Tool&lt;/b&gt;&lt;br/&gt;Uses published templates" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="oRmCvfrn0HqmgXv1rQWE-1">
+                    <mxGeometry x="30" y="364" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="oRmCvfrn0HqmgXv1rQWE-3" value="&lt;b&gt;Core Banking Events&lt;/b&gt;&lt;br/&gt;Txn posted, balance change" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="oRmCvfrn0HqmgXv1rQWE-1">
+                    <mxGeometry x="30" y="44" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="oRmCvfrn0HqmgXv1rQWE-4" value="&lt;b&gt;Cards Platform&lt;/b&gt;&lt;br/&gt;Auth/decline, card status" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="oRmCvfrn0HqmgXv1rQWE-1">
+                    <mxGeometry x="30" y="124" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="oRmCvfrn0HqmgXv1rQWE-5" value="&lt;b&gt;Digital Channel (App/Web)&lt;/b&gt;&lt;br/&gt;User actions, device signals" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="oRmCvfrn0HqmgXv1rQWE-1">
+                    <mxGeometry x="30" y="204" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="oRmCvfrn0HqmgXv1rQWE-6" value="&lt;b&gt;Customer/CRM&lt;/b&gt;&lt;br/&gt;Profile updates, lifecycle" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="oRmCvfrn0HqmgXv1rQWE-1">
+                    <mxGeometry x="30" y="284" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="W6d0fx1DJUrsipF7N2-A-9" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="6VzU3fTYOtlQIsVIoned-1" target="W6d0fx1DJUrsipF7N2-A-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="-Y_qpw5Ba75I0o2kRDsG-7" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="6VzU3fTYOtlQIsVIoned-1" target="-Y_qpw5Ba75I0o2kRDsG-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-1" value="&lt;b&gt;NotificationHub&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="85" width="560" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-2" value="&lt;b&gt;Ingress / API&lt;/b&gt;&lt;br/&gt;Campaign triggers, events" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry x="16" y="44" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-3" value="&lt;b&gt;Routing &amp;amp; Orchestration&lt;/b&gt;&lt;br/&gt;Channel selection, flow" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry x="292" y="44" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-4" value="&lt;b&gt;Template Resolution&lt;/b&gt;&lt;br/&gt;Fetch id + version" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry x="16" y="132" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-5" value="&lt;b&gt;Consent &amp;amp; Policy Gate&lt;/b&gt;&lt;br/&gt;Marketing + suppressions" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry x="292" y="132" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-6" value="&lt;b&gt;Render &amp;amp; Personalize&lt;/b&gt;&lt;br/&gt;Merge context + locale" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry x="16" y="220" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-7" value="&lt;b&gt;Dispatch &amp;amp; Retry&lt;/b&gt;&lt;br/&gt;Send, retry, throttling" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry x="292" y="220" width="252" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="6VzU3fTYOtlQIsVIoned-8" value="&lt;b&gt;Events &amp;amp; Telemetry&lt;/b&gt;&lt;br/&gt;Audit + metrics emit" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="6VzU3fTYOtlQIsVIoned-1">
+                    <mxGeometry x="16" y="308" width="528" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="4TbMjKYOMOdfFSc2I_8E-2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="W6d0fx1DJUrsipF7N2-A-1" target="4TbMjKYOMOdfFSc2I_8E-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2RSE_xB72vQs3og6hcB-8" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="W6d0fx1DJUrsipF7N2-A-1" target="p2-tm-lib">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="W6d0fx1DJUrsipF7N2-A-1" value="&lt;b&gt;Message Delivery Platform&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="570" width="560" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdp-outbox" value="&lt;b&gt;Outbox / Delivery Queue&lt;/b&gt;&lt;br/&gt;Buffer + order" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="W6d0fx1DJUrsipF7N2-A-1">
+                    <mxGeometry x="16" y="44" width="252" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdp-adapters" value="&lt;b&gt;Provider Adapters&lt;/b&gt;&lt;br/&gt;Email/SMS/Push" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="W6d0fx1DJUrsipF7N2-A-1">
+                    <mxGeometry x="292" y="44" width="252" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdp-retry" value="&lt;b&gt;Throttling &amp;amp; Retry Engine&lt;/b&gt;&lt;br/&gt;Rate limits, backoff" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="W6d0fx1DJUrsipF7N2-A-1">
+                    <mxGeometry x="16" y="109" width="252" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdp-status" value="&lt;b&gt;Message Status Store&lt;/b&gt;&lt;br/&gt;State + history" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="W6d0fx1DJUrsipF7N2-A-1">
+                    <mxGeometry x="292" y="109" width="252" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdp-callback" value="&lt;b&gt;Receipts / Webhooks&lt;/b&gt;&lt;br/&gt;Delivery, bounce, complaint" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="W6d0fx1DJUrsipF7N2-A-1">
+                    <mxGeometry x="16" y="174" width="252" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdp-dlq" value="&lt;b&gt;DLQ / Replay&lt;/b&gt;&lt;br/&gt;Re-drive failures" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="W6d0fx1DJUrsipF7N2-A-1">
+                    <mxGeometry x="292" y="174" width="252" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdp-edge-callbacks" value="callbacks" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="4TbMjKYOMOdfFSc2I_8E-1" target="mdp-callback">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="-Y_qpw5Ba75I0o2kRDsG-1" value="&lt;b&gt;Context Assembly (Per-Service Payload)&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" vertex="1" parent="1">
+                    <mxGeometry x="890" y="115" width="420" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="-Y_qpw5Ba75I0o2kRDsG-2" value="&lt;b&gt;Core Banking&lt;/b&gt;&lt;br/&gt;Balances, account status,&lt;br/&gt;transactions, due dates" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="-Y_qpw5Ba75I0o2kRDsG-1">
+                    <mxGeometry x="16" y="44" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="-Y_qpw5Ba75I0o2kRDsG-3" value="&lt;b&gt;Customer System&lt;/b&gt;&lt;br/&gt;Identity, contact points,&lt;br/&gt;language/region" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="-Y_qpw5Ba75I0o2kRDsG-1">
+                    <mxGeometry x="216" y="44" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="-Y_qpw5Ba75I0o2kRDsG-4" value="&lt;b&gt;Cards System&lt;/b&gt;&lt;br/&gt;Card events, merchant details,&lt;br/&gt;card status" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="-Y_qpw5Ba75I0o2kRDsG-1">
+                    <mxGeometry x="16" y="144" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="-Y_qpw5Ba75I0o2kRDsG-5" value="&lt;b&gt;Digital Channels/App&lt;/b&gt;&lt;br/&gt;Device token, app version,&lt;br/&gt;deep links" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="-Y_qpw5Ba75I0o2kRDsG-1">
+                    <mxGeometry x="216" y="144" width="188" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="-Y_qpw5Ba75I0o2kRDsG-6" value="&lt;b&gt;Consent/Preference Service&lt;/b&gt;&lt;br/&gt;Marketing consent (Email/SMS/Push)&lt;br/&gt;Topic subscriptions + suppressions" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="-Y_qpw5Ba75I0o2kRDsG-1">
+                    <mxGeometry x="16" y="244" width="388" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="4TbMjKYOMOdfFSc2I_8E-1" value="&lt;b&gt;Channel Gateways&lt;/b&gt;&lt;br/&gt;Email / SMS / Push providers" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="940" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2RSE_xB72vQs3og6hcB-1" value="&lt;b&gt;Template Management&lt;/b&gt;" style="swimlane;rounded=1;whiteSpace=wrap;html=1;align=left;startSize=28;" vertex="1" parent="1">
+                    <mxGeometry x="-230" y="570" width="460" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2-tm-lib" value="&lt;b&gt;Template Library / Registry&lt;/b&gt;&lt;br/&gt;Published templates" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="p2RSE_xB72vQs3og6hcB-1">
+                    <mxGeometry x="236" y="44" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2-tm-govern" value="&lt;b&gt;Approvals &amp;amp; Governance&lt;/b&gt;&lt;br/&gt;RBAC + audit" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="p2RSE_xB72vQs3og6hcB-1">
+                    <mxGeometry x="16" y="114" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2-tm-publish" value="&lt;b&gt;Versioning &amp;amp; Publishing&lt;/b&gt;&lt;br/&gt;id+version" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="p2RSE_xB72vQs3og6hcB-1">
+                    <mxGeometry x="236" y="114" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2-tm-test" value="&lt;b&gt;Preview &amp;amp; Whitelist Test Send &amp;amp; self-service&lt;/b&gt;&lt;br&gt;Validate before publish" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="p2RSE_xB72vQs3og6hcB-1">
+                    <mxGeometry x="16" y="184" width="420" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2-tm-author" value="&lt;b&gt;Authoring &amp;amp; Snippets&lt;/b&gt;&lt;br/&gt;Email/SMS/Push" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="p2RSE_xB72vQs3og6hcB-1">
+                    <mxGeometry x="16" y="44" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2RSE_xB72vQs3og6hcB-9" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="p2-tm-test" target="4TbMjKYOMOdfFSc2I_8E-1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
